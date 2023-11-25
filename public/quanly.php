@@ -12,9 +12,9 @@ session_start();
     <link rel="shortcut icon" type="images" href="https://img3.thuthuatphanmem.vn/uploads/2019/10/17/hinh-anh-logo-hoa-sen-png_102723080.png">
     <!-- link bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- {{!-- link jquery  --}} -->
+    <!--    link jquery    -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- {{!-- link font awesome  --}} -->
+    <!--    link font awesome    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- link css  -->
@@ -22,14 +22,13 @@ session_start();
 </head>
 
 <body>
-    <!--begin HEADER -->
+    <!--header-->
     <?php include_once "../apps/resoures/view/partials/header_admin.php"; ?>
     <?php include '../apps/config/connect.php'; ?>
-    <!--end   HEADER -->
 
     <div class=" container min_height">
         <span class="" style="position: absolute; top: 110px; left: 140px;">
-            <a href="http://localhost/thuvien/public/main_admin.php">
+            <a href="http://nldemo.localhost/public/main_admin.php">
                 <i class="fa-solid fa-arrow-left-long fa-beat fa-2xl" style="color: #73ff00;"></i>
             </a>
         </span>
@@ -90,7 +89,7 @@ session_start();
                                 </div>
                             </div>
                         ";
-                }
+                    }
                 ?>
             </tbody>
         </table>
@@ -98,8 +97,6 @@ session_start();
 
 
     <!-- Modal -->
-
-
     <form name="delete-form" method="POST"></form>
     <!-- Bootstrap JavaScript Libraries -->
     <script>
@@ -114,18 +111,17 @@ session_start();
             id_novel = button.getAttribute('data-id')
         })
         btnDeleteCart.onclick = function() {
-            deleteForm.action = '../apps/resoures/view/book/delete_book.php?id=' + id_novel;
+            deleteForm.action = '../apps/resoures/view/sanpham/delete_sp.php?id=' + id_novel;
             deleteForm.submit();
         }
     </script>
 
 
 
-    <!--begin FOOTER  -->
+    <!--footer  -->
     <?php include_once "../apps/resoures/view/partials/footer.php"; ?>
-    <!-- end  FOOTER  -->
 </body>
-<!-- {{!-- link js bootstrap  --}} -->
+<!--    link js bootstrap    -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

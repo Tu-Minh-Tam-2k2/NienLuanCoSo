@@ -12,9 +12,9 @@ session_start();
     <link rel="shortcut icon" type="images" href="https://img3.thuthuatphanmem.vn/uploads/2019/10/17/hinh-anh-logo-hoa-sen-png_102723080.png">
     <!-- link bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- {{!-- link jquery  --}} -->
+    <!-- link jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- {{!-- link font awesome  --}} -->
+    <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- link css  -->
@@ -22,10 +22,9 @@ session_start();
 </head>
 
 <body>
-    <!--begin HEADER -->
+    <!--header -->
     <?php include_once "../apps/resoures/view/partials/header_admin.php"; ?>
     <?php include '../apps/config/connect.php'; ?>
-    <!--end   HEADER  -->
 
     <div class="container  ">
         <section class="" style="background-color: #eee; ">
@@ -43,7 +42,7 @@ session_start();
                                             </a>
                                         </span>
                                         <!-- FORM lấy dữ liệu để POST đi xử lý -->
-                                        <form class="mx-1 mx-md-4 " method="POST" action="../apps/resoures/view/book/xuli_add_book.php">
+                                        <form class="mx-1 mx-md-4 " method="POST" action="../apps/resoures/view/sanpham/xuli_add_sp.php">
                                             <!-- Tên sản phẩm -->
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <div class="form-outline flex-fill mb-0">
@@ -61,8 +60,6 @@ session_start();
                                                 </div>
                                             </div>
 
-
-
                                             <!-- Link ảnh -->
                                             <br>
                                             <div class="d-flex flex-row align-items-center mb-4 ">
@@ -72,11 +69,11 @@ session_start();
                                                 </div>
                                             </div>
 
-                                           <!-- Xuất xứ -->
+                                            <!-- Xuất xứ -->
                                             <br>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <label class="form-label" for="gia"><b>Xuất xứ </b></label>
+                                                    <label class="form-label" for="xuatxu"><b>Xuất xứ </b></label>
                                                     <input autocomplete="off" type="text" name="noidung" class="form-control hover_large border" name="actor" required />
                                                 </div>
                                             </div>
@@ -90,7 +87,7 @@ session_start();
                                                 </div>
                                             </div>
                                             <br>
-                            
+
 
                                             <div class=" mb-3 mb-lg-4">
                                                 <button type="submit" class="btn btn-primary btn-lg ">Thêm</button>
@@ -100,7 +97,7 @@ session_start();
 
                                     </div>
                                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                        <img src="https://www.bigc.vn/files/blog/thumb/742x0/calo-trong-trai-cay-03-01-02.png"  style="width: 47%; top: 100px; position: absolute;" alt="">
+                                        <img src="https://www.bigc.vn/files/blog/thumb/742x0/calo-trong-trai-cay-03-01-02.png" style="width: 47%; top: 100px; position: absolute;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -111,11 +108,11 @@ session_start();
         </section>
     </div>
 
-    <!--begin FOOTER  -->
+    <!-- footer  -->
     <?php include_once "../apps/resoures/view/partials/footer.php"; ?>
-    <!-- end  FOOTER  -->
+
 </body>
-<!-- {{!-- link js bootstrap  --}} -->
+<!--    link js bootstrap    -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

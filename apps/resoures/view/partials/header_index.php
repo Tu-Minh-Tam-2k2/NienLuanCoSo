@@ -36,8 +36,8 @@ session_start();
               ?>
             </a>
             <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="register.php"><b>Register</b></a></li>
-              <li><a class="dropdown-item" href="login.php"><b>Sign in</b></a></li>
+              <li><a class="dropdown-item" href="register.php"><b>Đăng ký</b></a></li>
+              <li><a class="dropdown-item" href="login.php"><b>Đăng nhập</b></a></li>
           </li>
         </button>
       </ul>

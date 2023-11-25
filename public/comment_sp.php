@@ -12,9 +12,9 @@ session_start();
     <link rel="shortcut icon" type="images" href="https://img3.thuthuatphanmem.vn/uploads/2019/10/17/hinh-anh-logo-hoa-sen-png_102723080.png">
     <!-- link bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- {{!-- link jquery  --}} -->
+    <!--    link jquery    -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- {{!-- link font awesome  --}} -->
+    <!--    link font awesome    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- link css  -->
@@ -22,31 +22,31 @@ session_start();
 </head>
 
 <body>
-    <!--begin HEADER -->
+    <!--header -->
     <?php include_once "../apps/resoures/view/partials/header_admin.php"; ?>
     <?php include '../apps/config/connect.php'; ?>
-    <!--end   HEADER -->
-     <div class="container-fluid">
-    <div class=" container-fuild min_height mb-3">
-        <div class="row">
-            <div class="col-5">
-                <table class="table table-bordered border border-secondary mt-3 m-auto" style="width: 90%;">
-                    <thead class="bg-success text-white">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Tên sách</th>
-                            <th scope="col">Comment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $query = "SELECT * FROM sanpham";
-                        $sth = $pdo->prepare($query);
-                        $sth->execute([]);
-                        $i=0;
-                        while ($row = $sth->fetch()) {
-                            $i++;
-                            echo "
+
+    <div class="container-fluid">
+        <div class=" container-fuild min_height mb-3">
+            <div class="row">
+                <div class="col-5">
+                    <table class="table table-bordered border border-secondary mt-3 m-auto" style="width: 90%;">
+                        <thead class="bg-success text-white">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tên sách</th>
+                                <th scope="col">Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $query = "SELECT * FROM sanpham";
+                            $sth = $pdo->prepare($query);
+                            $sth->execute([]);
+                            $i = 0;
+                            while ($row = $sth->fetch()) {
+                                $i++;
+                                echo "
                             <tr>
                                 <th class=\"bg-light\">$i</th>
                                 <td>{$row['tensp']}</td>
@@ -54,63 +54,63 @@ session_start();
                             </tr>
 
                         ";
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
 
-            <div class="col-7">
-                <div id="xem_comment" class="box m-auto mt-3 " style="width: 90%;">
-                    <div class="tieude">
+                <div class="col-7">
+                    <div id="xem_comment" class="box m-auto mt-3 " style="width: 90%;">
+                        <div class="tieude">
 
-                    </div>
-                    <div class="noidung">
-                        <table class="table table-bordered ">
-                            <thead class="bg-success text-white">
-                                <tr>
-                                    <th  scope="col">STT</th>
-                                    <th  scope="col">Sản phẩm </th>
-                                    <th scope="col">Comment</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Hien thi sach  -->
-                                <?php
-                                if (isset($_GET['id_sp'])) {
-                                    $query = "SELECT * FROM sanpham WHERE id_sp =? ";
-                                    $sth = $pdo->prepare($query);
-                                    $sth->execute([
-                                        $_GET['id_sp']
-                                    ]);
-                                    while ($row = $sth->fetch()) {
-                                        echo "
-                                                <td><b>{$row['id_sp']}</b></td>
-                                                <td>
-                                                    <img class=\"img_xemcomment_book\"  src=\"{$row['link']}\" style=\"height: 320px; width: 320px; text-align:center; \">
-                                                </td>
-                                            ";
-                                    }
-                                }
-                                ?>
-
-                                <td>
+                        </div>
+                        <div class="noidung">
+                            <table class="table table-bordered ">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th scope="col">STT</th>
+                                        <th scope="col">Sản phẩm </th>
+                                        <th scope="col">Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- HIển thị sản phẩm  -->
                                     <?php
-
                                     if (isset($_GET['id_sp'])) {
-                                        $query = "SELECT *   FROM user , comment 
-                                        WHERE user.id=comment.id_user 
-                                        AND comment.id_sp=? 
-                                        ORDER BY created_at DESC";
-
+                                        $query = "SELECT * FROM sanpham WHERE id_sp =? ";
                                         $sth = $pdo->prepare($query);
                                         $sth->execute([
                                             $_GET['id_sp']
                                         ]);
-
                                         while ($row = $sth->fetch()) {
+                                            echo "
+                                                <td><b>{$row['id_sp']}</b></td>
+                                                <td>
+                                                    <img class=\"img_xemcomment_sp\"  src=\"{$row['link']}\" style=\"height: 320px; width: 320px; text-align:center; \">
+                                                </td>
+                                            ";
+                                        }
+                                    }
+                                    ?>
 
-                                            echo "  
+                                    <td>
+                                        <?php
+
+                                        if (isset($_GET['id_sp'])) {
+                                            $query = "SELECT *   FROM user , comment 
+                                        WHERE user.id=comment.id_user 
+                                        AND comment.id_sp=? 
+                                        ORDER BY created_at DESC";
+
+                                            $sth = $pdo->prepare($query);
+                                            $sth->execute([
+                                                $_GET['id_sp']
+                                            ]);
+
+                                            while ($row = $sth->fetch()) {
+
+                                                echo "  
                                                     
                                                             <div class=\"border max_width_758  mt-3 rounded min_height_50 word_wrap hover_large position-relative\">
                                                                 <div class=\"mx-2\"><b>{$row['username']} : </b></div>   
@@ -140,44 +140,42 @@ session_start();
                                                                 </div>
                                                             </div>
                                                         ";
+                                            }
                                         }
-                                    }
-                                    ?>
-                                </td>
+                                        ?>
+                                    </td>
+                                </tbody>
+                            </table>
 
-                            </tbody>
-                        </table>
-
-                        <form name="delete-form" method="POST"></form>
-                        <!-- Bootstrap JavaScript Libraries -->
-                        <script>
-                            var delete_novel = document.getElementById('delete_comment')
-                            var id_novel
-                            var deleteForm = document.forms['delete-form'];
-                            var btnDeleteCart = document.getElementById('btn-delete-cart');
-                            delete_novel.addEventListener('show.bs.modal', event => {
-                                // Button that triggered the modal
-                                var button = event.relatedTarget
-                                // Extract info from data-bs-* attributes
-                                id_novel = button.getAttribute('data-id')
-                            })
-                            btnDeleteCart.onclick = function() {
-                                deleteForm.action = '../apps/resoures/view/book/delete_comment.php?id_comment=' + id_novel;
-                                deleteForm.submit();
-                            }
-                        </script>
+                            <form name="delete-form" method="POST"></form>
+                            <!-- Bootstrap JavaScript -->
+                            <script>
+                                var delete_novel = document.getElementById('delete_comment')
+                                var id_novel
+                                var deleteForm = document.forms['delete-form'];
+                                var btnDeleteCart = document.getElementById('btn-delete-cart');
+                                delete_novel.addEventListener('show.bs.modal', event => {
+                                    // Button that triggered the modal
+                                    var button = event.relatedTarget
+                                    // Extract info from data-bs-* attributes
+                                    id_novel = button.getAttribute('data-id')
+                                })
+                                btnDeleteCart.onclick = function() {
+                                    deleteForm.action = '../apps/resoures/view/sanpham/delete_comment.php?id_comment=' + id_novel;
+                                    deleteForm.submit();
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <!--begin FOOTER  -->
+    <!-- footer -->
     <?php include_once "../apps/resoures/view/partials/footer.php"; ?>
-    <!-- end  FOOTER  -->
 </body>
 
-<!-- {{!-- link js bootstrap  --}} -->
+<!--    link js bootstrap    -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

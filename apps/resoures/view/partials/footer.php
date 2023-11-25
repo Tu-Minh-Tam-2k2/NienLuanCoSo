@@ -320,7 +320,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 footer-contact">
-                        <h3>DongThap Specialty</h3>
+                        <h3>DongThap's Specialty</h3>
                         <p>
                             Cao Lãnh<br><br>
                             Lai Vung <br><br>
@@ -341,8 +341,8 @@
 
 
                     <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Dong Thap Specialty</h4>
-                        <p>DongThap Sepecialty là chợ trực tuyến đánh dấu một kỷ nguyên mới trong việc bán đặc sản bằng cách thu hút nông dân tương tác xã hội trực tuyến mạnh mẽ với khách hàng</p>
+                        <h4>DongThap's Specialty</h4>
+                        <p>DongThap's Specialty là chợ trực tuyến đánh dấu một kỷ nguyên mới trong việc bán đặc sản bằng cách thu hút nông dân tương tác xã hội trực tuyến mạnh mẽ với khách hàng</p>
                         <div class="socail-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -356,7 +356,7 @@
         </div>
         <div class="container py-4">
             <div class="copyright">
-                &copy; Copyright <strong><span>DongThapSpecialty</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>DongThap's Specialty</span></strong>. Tu_Minh_Tam
             </div>
         </div>
     </footer>

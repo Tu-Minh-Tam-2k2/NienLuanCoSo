@@ -9,9 +9,9 @@
     <link rel="shortcut icon" type="images" href="https://img3.thuthuatphanmem.vn/uploads/2019/10/17/hinh-anh-logo-hoa-sen-png_102723080.png">
     <!-- link bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- {{!-- link jquery  --}} -->
+    <!--    link jquery  --}} -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- {{!-- link font awesome  --}} -->
+    <!--    link font awesome  --}} -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- link css  -->
@@ -19,13 +19,13 @@
 </head>
 
 <body>
-    <!--begin HEADER -->
+    <!--header-->
     <?php include_once "../apps/resoures/view/partials/header.php"; ?>
     <?php include '../apps/config/connect.php'; ?>
-    <!--end   HEADER -->
+
     <div class='container-fluid'>
         <div class=" min_height ">
-            <!-- Hiển thị sách và nội dung bởi id trên URL -->
+            <!-- Hiển thị sản phẩm và nội dung bởi id trên URL -->
             <?php
             $query = "SELECT * FROM sanpham WHERE id_sp=?";
             $sth = $pdo->prepare($query);
@@ -85,7 +85,7 @@
                 <div class="col-8   ">
                     <h2 class="text-center"><b>Đánh giá</b></h2>
                     <!-- FORM chứa comment đc gởi đi cùng với id của cuốn sách và id của người comment -->
-                    <form action="../apps/resoures/view/book/comment_book.php?id=<?php echo $_GET['id']; ?> " method="POST" name="form" class="form-inline d-flex ">
+                    <form action="../apps/resoures/view/sanpham/comment_sp.php?id=<?php echo $_GET['id']; ?> " method="POST" name="form" class="form-inline d-flex ">
                         <textarea class="border border-success" required name="noidung" cols="100" rows="2" placeholder="Đánh giá của bạn về sản phẩm" class="mr-10 hover_large border"></textarea>
                         <button style="margin-left:20px;" type="submit" class="btn btn-success  ">Đăng</button>
                     </form>
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <!-- List sach lien quan  -->
+            <!-- sản phẩm lien quan  -->
             <div class="row border text-center justify-content-center">
                 <p class="mt-3"><b>Sản phẩm liên quan</b></p>
                 <div class="card p-0 mx-4 mt-3 mb-3 hover_large" style="width: 10rem;">
@@ -158,11 +158,11 @@
             </div>
         </div>
     </div>
-    <!--begin FOOTER  -->
+    <!--footer-->
     <?php include_once "../apps/resoures/view/partials/footer.php"; ?>
-    <!-- end  FOOTER  -->
+
 </body>
-<!-- {{!-- link js bootstrap  --}} -->
+<!--    link js bootstrap  -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

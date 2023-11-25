@@ -9,26 +9,26 @@
       </button>
     </div>
 
-    <div class="navbar-nav">
+    <div class="navbar-nav" style="margin: 0px 30px">
       <a class="nav-link active" aria-current="page" href="../public/add_sp.php">
-        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 90px;">
+        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 100px;">
           <b>Thêm sản phẩm mới</b>
         </button>
       </a>
     </div>
 
-    <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="../public/quanly.php">
-        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 90px;">
-          <b>Quản lí sản phẩm</b>
+    <div class="navbar-nav" style="margin: 0px 30px">
+      <a class="nav-link active " aria-current="page" href="../public/quanly.php">
+        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 100px;">
+          <b>Quản lý sản phẩm</b>
         </button>
       </a>
     </div>
 
-    <div class="navbar-nav">
+    <div class="navbar-nav" style="margin: 0px 30px">
       <a class="nav-link active" aria-current="page" href="../public/comment_sp.php">
-        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 90px;">
-          <b>Quản lí đánh giá</b>
+        <button class="btn btn-light rounded-pill " style="height: 50px; min-width: 100px;">
+          <b>Quản lý đánh giá</b>
         </button>
       </a>
     </div>
@@ -47,8 +47,8 @@
               ?>
           </a>
           <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="login.php"><b>Sign in</b></a></li>
-            <li><a class="dropdown-item" href="../apps/resoures/view/authentication/submit_logout.php"><b>Log out</b></a></li>
+            <li><a class="dropdown-item" href="login.php"><b>Đăng nhập</b></a></li>
+            <li><a class="dropdown-item" href="../apps/resoures/view/authentication/submit_logout.php"><b>Đăng xuất</b></a></li>
           </ul>
         </li>
       </button>

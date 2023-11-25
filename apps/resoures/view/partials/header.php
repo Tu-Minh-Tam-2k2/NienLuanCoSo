@@ -58,8 +58,8 @@ session_start();
             ?>
           </a>
           <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="login.php"><b>Sign in</b></a></li>
-            <li><a class="dropdown-item" href="../apps/resoures/view/authentication/submit_logout.php"><b>Log out</b></a></li>
+            <li><a class="dropdown-item" href="login.php"><b>Đăng nhập</b></a></li>
+            <li><a class="dropdown-item" href="../apps/resoures/view/authentication/submit_logout.php"><b>Đăng xuất</b></a></li>
           </ul>
         </li>
       </button>
