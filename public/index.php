@@ -29,7 +29,7 @@
 
             background-size: 40%;
             background-position: 50% 50%;
-            -webkit-background-clip: text;
+            
             color: rgba(0, 0, 0, 0.08);
             animation: zoomout 10s ease 500ms forwards;
         }
