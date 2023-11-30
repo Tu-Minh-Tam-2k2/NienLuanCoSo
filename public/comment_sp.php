@@ -31,11 +31,11 @@ session_start();
             <div class="row">
                 <div class="col-5">
                     <table class="table table-bordered border border-secondary mt-3 m-auto" style="width: 90%;">
-                        <thead class="bg-success text-white">
+                        <thead class="bg-success text-white text-center">
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Tên sách</th>
-                                <th scope="col">Comment</th>
+                                <th scope="col">STT</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Đánh giá</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,20 +62,19 @@ session_start();
 
                 <div class="col-7">
                     <div id="xem_comment" class="box m-auto mt-3 " style="width: 90%;">
-                        <div class="tieude">
-
-                        </div>
+                        <div class="tieude"></div>
+                        
                         <div class="noidung">
                             <table class="table table-bordered ">
-                                <thead class="bg-success text-white">
+                                <thead class="bg-success text-white text-center">
                                     <tr>
                                         <th scope="col">STT</th>
                                         <th scope="col">Sản phẩm </th>
-                                        <th scope="col">Comment</th>
+                                        <th scope="col">Đánh giá</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- HIển thị sản phẩm  -->
+                                    <!-- Hiển thị sản phẩm  -->
                                     <?php
                                     if (isset($_GET['id_sp'])) {
                                         $query = "SELECT * FROM sanpham WHERE id_sp =? ";
@@ -87,31 +86,28 @@ session_start();
                                             echo "
                                                 <td><b>{$row['id_sp']}</b></td>
                                                 <td>
-                                                    <img class=\"img_xemcomment_sp\"  src=\"{$row['link']}\" style=\"height: 320px; width: 320px; text-align:center; \">
+                                                    <h3 class=\"text-center\">{$row['tensp']}</h3>
+                                                    <img class=\"img_xemcomment_sp\"  src=\"{$row['link']}\" style=\"height: 300px; width: 300px; text-align:center; \">
                                                 </td>
                                             ";
                                         }
                                     }
                                     ?>
 
+                                    <!-- Hiển thị đánh giá -->
                                     <td>
                                         <?php
-
                                         if (isset($_GET['id_sp'])) {
                                             $query = "SELECT *   FROM user , comment 
                                         WHERE user.id=comment.id_user 
                                         AND comment.id_sp=? 
                                         ORDER BY created_at DESC";
-
                                             $sth = $pdo->prepare($query);
                                             $sth->execute([
                                                 $_GET['id_sp']
                                             ]);
-
                                             while ($row = $sth->fetch()) {
-
-                                                echo "  
-                                                    
+                                                echo "                                             
                                                             <div class=\"border max_width_758  mt-3 rounded min_height_50 word_wrap hover_large position-relative\">
                                                                 <div class=\"mx-2\"><b>{$row['username']} : </b></div>   
                                                                 <div class=\"mx-2\"> {$row['noidung']} </div> 

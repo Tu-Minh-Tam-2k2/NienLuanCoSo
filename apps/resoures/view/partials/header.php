@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- logo -->
   <a href="trangchu.php"><img class="img_logo" src="https://hapotravel.com/wp-content/uploads/2023/04/tong-hop-25-mau-logo-hoa-sen-dep-va-y-nghia_3.jpg" alt=""></a>

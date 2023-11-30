@@ -1,7 +1,3 @@
-<?php 
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +34,6 @@ session_start();
             <div class="col-md-6">
                 <form class="well form-horizontal" action=" " method="post" id="contact_form" style="border: 2px;">
                     <fieldset>
-                        <!-- Form Name -->
                         <legend style="margin-left: 23%; margin-top: 10px"><b>Thông tin địa chỉ</b></legend>
 
                         <!-- Text input-->
@@ -84,7 +79,7 @@ session_start();
 
                             <div class="form-group">
                                 <div class="col-md-4 mt-md-3">
-                                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                                    <button type="submit" class="btn btn-warning">Xác nhận <span class="glyphicon glyphicon-send"></span></button>
                                 </div>
                             </div>
                     </fieldset>
@@ -101,20 +96,7 @@ session_start();
                         <th>Số lượng</th>
                         <th>Giá</th>
                     </tr>
-                    <?php
-                    $query = "SELECT * FROM sanpham";
-                    $sth = $pdo->prepare($query);
-                    $sth->execute([]);
-                    $i = 0;
-                    while ($row = $sth->fetch()) {
-                        $i++;
-                        echo "
-                            
-
-                            
-                        ";
-                    }
-                    ?>
+                    <!-- ..... -->
 
                 </table>
             </div>
@@ -127,7 +109,7 @@ session_start();
 </body>
 
 
-<!--    link js bootstrap    -->
+<!--    link js bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
 
