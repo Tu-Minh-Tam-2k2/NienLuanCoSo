@@ -68,6 +68,7 @@ session_start();
                                     <a href=\"\"><img class=\"card-img-top img_sp \" src=\"{$row['link']}\"></a>
                                     <div class=\"card-body  border border-warning text-center bg_f5f2f2\">
                                         <h5 class=\"card-title  \">{$row['tensp']}</h5>
+                                        <h5 class=\"card-title  \">{$row['gia']}</h5>
                                     </div>
                                 </div>
                                 

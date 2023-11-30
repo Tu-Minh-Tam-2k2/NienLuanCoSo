@@ -65,11 +65,13 @@
                             </div>
                         </div>
                     ";
-            }
+                }
             ?>
             <div>
                 <button class="btn btn-primary btn-md btn-danger" style="margin-left: 50%">
-                    <a href="cart.php" style="text-decoration:none; color:white">Thêm vào giỏ</a>
+                <form action="cart.php?id_sp=<?php echo $_GET['id_sp']; ?>" method="get" name="addcart" type="hidden">
+                    <a href="cart.php" style="text-decoration:none; color:white">Thêm vào giỏ</a></form>
+                     
                 </button>
             </div>
            
